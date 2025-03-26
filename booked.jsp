@@ -379,6 +379,7 @@
     </div>
 
     <button type="submit" class="submit-btn">Submit</button>
+<a href="payment.jsp.jsp" class="submit-btn">Pay now</a>
 </form>
     
     <!-- Footer -->
