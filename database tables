@@ -1,0 +1,35 @@
+users table in pgsql
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    user_type VARCHAR(20) NOT NULL,
+    college VARCHAR(100),
+    password VARCHAR(255) NOT NULL
+);
+
+booking table in pgsql
+
+CREATE TABLE booking (
+    booking_id SERIAL PRIMARY KEY,
+    user_id SERIAL,
+    num_members INTEGER,
+    city VARCHAR(255),
+    hotel_choice VARCHAR(50),
+    food_preference VARCHAR(50),
+    booking_status VARCHAR(50)
+);
+
+payment table in pgsql
+
+CREATE TABLE payment (
+    payment_id SERIAL PRIMARY KEY,
+    booking_id INTEGER NOT NULL,
+    amount NUMERIC(10,2) NOT NULL,
+    payment_mode VARCHAR(50) NOT NULL,
+    payment_status VARCHAR(50) NOT NULL,
+    transaction_id VARCHAR(100) NOT NULL
+);
